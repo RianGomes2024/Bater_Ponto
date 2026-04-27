@@ -36,6 +36,7 @@ node src/Server.js
 | POST | /Users | Cadastra um novo usuário |
 | PUT | /Users/:id | Atualiza os dados de um usuário |
 | DELETE | /Users/:id | Deleta um usuário |
+| GET | /Users/buscar | Buscar Usuário pelo email |
 
 ## Observações
 

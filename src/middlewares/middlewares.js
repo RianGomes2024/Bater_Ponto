@@ -1,3 +1,5 @@
+
+
 const CamposVazios=(req,res,next)=>{
         console.log("chegou")
     const campos={"nome":"","sobrenome":"","email":"","senha":"","cidade":"","Estado":""}
@@ -8,6 +10,7 @@ const CamposVazios=(req,res,next)=>{
     }
      next()
 }
+
 const validarAlter = (req, res, next) => {
    const dados=req.body
    if(Object.keys(dados).length===0){
@@ -21,7 +24,13 @@ const validarAlter = (req, res, next) => {
    }
   
 next()
-
+}
+const validarEmail=(req,res,next)=>{
+   const email=req.body.email
+   if(email==="" || email===undefined){
+      return res.status(400).json({message:"O email deve ser informado"})
+   }
+   next()
 }
 
 const Formatos=(req,res,next)=>{
@@ -47,4 +56,4 @@ const Formatos=(req,res,next)=>{
          next()
 }
 
-export default {CamposVazios,Formatos,validarAlter}
+export default {validarEmail,CamposVazios,Formatos,validarAlter}
