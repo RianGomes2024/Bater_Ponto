@@ -33,10 +33,18 @@ node src/Server.js
 | Método | Rota | Descrição |
 |--------|------|-----------|
 | GET | /Users | Retorna todos os usuários |
+| GET | /Users/buscar | Buscar Usuário pelo email |
+| GET | /logins | Retorna o registro de logins |
+| GET | /login/buscar | Busca os logins realizados pelo email informado (Email e horário de login)|
+| GET | /buscar/ponto | Retornar os pontos batidos |
 | POST | /Users | Cadastra um novo usuário |
+| POST | /token/ponto/entrada | Bater o ponto na entrada com o token gerado no login |
+| POST |/token/ponto/saida | Bater o ponto na saida com o token gerado no login |
+| POST | /Users/login | Realizar Login |
 | PUT | /Users/:id | Atualiza os dados de um usuário |
 | DELETE | /Users/:id | Deleta um usuário |
-| GET | /Users/buscar | Buscar Usuário pelo email |
+
+
 
 ## Observações
 
