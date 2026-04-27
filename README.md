@@ -1,4 +1,4 @@
-# API Pessoa
+# Bater_Ponto
 
 API REST para cadastro e gerenciamento de pessoas, desenvolvida com Node.js e MySQL.
 
